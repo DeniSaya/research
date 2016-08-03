@@ -1,15 +1,16 @@
-function checkCase(x,y) {
-    y = x.toUpperCase();
-    if ( x == y ) {
-        y = x.toLowerCase();
-    } return y;
+function checkCase(letter) {
+    var upper = letter.toUpperCase();
+    if ( letter == upper ) {
+        upper = letter.toLowerCase();
+    } return upper;
 }
 
 function alterCase() {
-    var str = document.getElementById("text").value;
+    var input = document.querySelector("#text")
+    var str = input.value;
     var result = "";
-    for (i = 0; i < str.length; i++) {
+    for (var i = 0; i < str.length; i++) {
         result += checkCase(str.charAt(i)) + "";
     }
-    document.getElementById("text").value = result;
+    input.value = result;
 }
