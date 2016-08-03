@@ -6,10 +6,10 @@ function checkCase(x,y) {
 }
 
 function alterCase() {
-    var str = document.getElementById("text").value ;
-    var r = "" ;
+    var str = document.getElementById("text").value;
+    var result = "";
     for (i = 0; i < str.length; i++) {
-        r += checkCase(str.charAt(i)) + "";
+        result += checkCase(str.charAt(i)) + "";
     }
-    document.getElementById("text").value = r ;
+    document.getElementById("text").value = result;
 }
