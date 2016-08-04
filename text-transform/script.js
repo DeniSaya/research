@@ -21,3 +21,10 @@ var textTransform = (function () {
 
     return TextTransform;
 })();
+
+var changeColor = (function () {
+    'use strict';
+    var button = document.querySelector(".button");
+    button.className.add("button--red");
+
+})();
