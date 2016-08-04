@@ -10,7 +10,7 @@ var textTransform = (function () {
     }
 
     TextTransform.alterCase = function() {
-        var input = document.querySelector("#text");
+        var input = document.querySelector(".text");
         var str = input.value;
         var result = "";
         for (var i = 0; i < str.length; i++) {
@@ -20,11 +20,4 @@ var textTransform = (function () {
     }
 
     return TextTransform;
-})();
-
-var changeColor = (function () {
-    'use strict';
-    var button = document.querySelector(".button");
-    button.className.add("button--red");
-
 })();

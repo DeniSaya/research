@@ -3,9 +3,6 @@
     <head>
         <meta charset="utf-8">
         <title>Text Transform</title>
-        <script type="text/javascript"
-            src="script.js">
-        </script>
         <link rel="stylesheet"
             href="style.css"
             media="screen"
@@ -14,15 +11,25 @@
         </link>
     </head>
     <body>
-        <input id="text"
+        <input class="text"
             type="text"
             name="text"
             placeholder="text">
-        </input>
-        <input class="button"
+        <button class="button"
             type="button"
-            value="GO"
-            onclick="textTransform.alterCase()">
-        </input>
+            value="click"
+            onclick="app.go()">
+            GO
+        </button>
+
+        <script type="text/javascript"
+            src="js/app.js">
+        </script>
+        <script type="text/javascript"
+            src="js/text.js">
+        </script>
+        <script type="text/javascript"
+            src="js/color.js">
+        </script>
     </body>
 </html>
