@@ -6,9 +6,18 @@ var app = (function () {
     App.go = function() {
         textTransform.alterCase(input);
         changeColor.switchColor(input);
+    }
+    App.addition = function() {
         math.addition();
+    }
+    App.subtraction = function() {
         math.subtraction();
+    }
+    App.multiplication = function() {
         math.multiplication();
+    }
+
+    App.division = function() {
         math.division();
     }
 
