@@ -11,16 +11,53 @@
         </link>
     </head>
     <body>
-        <input class="text"
-            type="text"
-            name="text"
-            placeholder="text">
-        <button class="button"
-            type="button"
-            value="click"
-            onclick="app.go()">
-            GO
-        </button>
+        <div class="first">
+            <input class="text"
+                type="text"
+                name="text"
+                placeholder="text">
+            <button class="button"
+                type="button"
+                value="click"
+                onclick="app.go()">
+                GO
+            </button>
+        </div>
+        <div class="second">
+            <input class="first__number"
+                type="number"
+                name="first_number"
+                placeholder="number">
+            <input class="second__number"
+                    type="number"
+                    name="second_number"
+                    placeholder="number">
+            <button class="button"
+                type="button"
+                value="click"
+                onclick="app.go()">
+                +
+            </button>
+            <button class="button"
+                type="button"
+                value="click"
+                onclick="app.go()">
+                -
+            </button>
+            <button class="button"
+                type="button"
+                value="click"
+                onclick="app.go()">
+                *
+            </button>
+            <button class="button"
+                type="button"
+                value="click"
+                onclick="app.go()">
+                /
+            </button>
+            <label class="math__result">Math result: </label>
+        </div>
 
         <script type="text/javascript"
             src="js/app.js">
@@ -30,6 +67,9 @@
         </script>
         <script type="text/javascript"
             src="js/color.js">
+        </script>
+        <script type="text/javascript"
+            src="js/math.js">
         </script>
     </body>
 </html>
