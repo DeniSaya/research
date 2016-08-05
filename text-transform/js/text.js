@@ -9,8 +9,7 @@ var textTransform = (function () {
         } return upper;
     }
 
-    TextTransform.alterCase = function() {
-        var input = document.querySelector(".text");
+    TextTransform.alterCase = function(input) {
         var str = input.value;
         var result = "";
         for (var i = 0; i < str.length; i++) {
