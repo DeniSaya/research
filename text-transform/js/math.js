@@ -2,36 +2,37 @@ var math = (function () {
     'use strict';
 
     var differentMath = {};
+    var result = document.querySelector(".math__result");
+    differentMath.result = function(c) {
+      result.innerHTML = c;
+    }
+
     differentMath.addition = function(x, y) {
-        var x = parseInt(document.querySelector(".first__number").value);
-        var y = parseInt(document.querySelector(".second__number").value);
-        var z = x + y;
-        document.querySelector(".math__result").innerHTML = z;
+        var a = parseInt(x.value);
+        var b = parseInt(y.value);
+        var c = a + b;
+        differentMath.result(c);
     }
 
     differentMath.subtraction = function(x, y) {
-        var x = parseInt(document.querySelector(".first__number").value);
-        var y = parseInt(document.querySelector(".second__number").value);
-        var z = x - y;
-        document.querySelector(".math__result").innerHTML = z;
+        var a = parseInt(x.value);
+        var b = parseInt(y.value);
+        var c = a - b;
+        differentMath.result(c);
     }
 
     differentMath.multiplication = function(x, y) {
-        var x = parseInt(document.querySelector(".first__number").value);
-        var y = parseInt(document.querySelector(".second__number").value);
-        var z = x * y;
-        document.querySelector(".math__result").innerHTML = z;
+        var a = parseInt(x.value);
+        var b = parseInt(y.value);
+        var c = a * b;
+        differentMath.result(c);
     }
 
     differentMath.division = function(x, y) {
-        var x = parseInt(document.querySelector(".first__number").value);
-        var y = parseInt(document.querySelector(".second__number").value);
-        var z = x / y;
-        document.querySelector(".math__result").innerHTML = z;
-    }
-
-    differentMath.mathResult = function() {
-
+        var a = parseInt(x.value);
+        var b = parseInt(y.value);
+        var c = a / b;
+        differentMath.result(c);
     }
 
     return differentMath;
