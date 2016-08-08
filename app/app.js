@@ -1,12 +1,11 @@
-var users = (function() {
+var app = (function() {
     'use strict';
 
     var App = {};
-    var userList = document.querySelector(".list__users");
+    var userList = document.querySelector(".js-user-list");
     App.users = function() {
-        listOfUsers.users(users);
+        listOfUsers.users(users, userList);
     }
-
-
-
-})
+    App.users();
+    return App;
+})();
