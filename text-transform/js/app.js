@@ -3,31 +3,29 @@ var app = (function () {
 
     var App = {};
     var input = document.querySelector(".text");
-    var x = document.querySelector(".first__number");
-    var y = document.querySelector(".second__number");
+    var x = document.querySelector(".js-first-number");
+    var y = document.querySelector(".js-second-number");
+    var result = document.querySelector(".js-math-result");
+    
     App.go = function() {
         textTransform.alterCase(input);
         changeColor.switchColor(input);
     }
     App.addition = function() {
-        math.addition(x, y);
+        math.result(math.addition(x, y), result);
     }
 
     App.subtraction = function() {
-        math.subtraction(x, y);
+        math.result(math.subtraction(x, y), result);
     }
 
     App.multiplication = function() {
-        math.multiplication(x, y);
+        math.result(math.multiplication(x, y), result);
     }
 
     App.division = function() {
-        math.division(x, y);
+        math.result(math.division(x, y), result);
     }
 
-    App.result = function() {
-      math.result(c);
-    }
     return App;
-
 })();

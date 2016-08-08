@@ -24,11 +24,11 @@
             </button>
         </div>
         <div class="second">
-            <input class="first__number"
+            <input class="first__number js-first-number"
                 type="number"
                 name="first_number"
                 placeholder="number">
-            <input class="second__number"
+            <input class="second__number js-second-number"
                     type="number"
                     name="second_number"
                     placeholder="number">
@@ -56,7 +56,10 @@
                 onclick="app.division()">
                 /
             </button>
-            <label class="math__result"></label>
+            <label class="math__result">
+                Math result:
+                <span class="js-math-result "></span>
+            </label>
         </div>
 
         <script type="text/javascript"
