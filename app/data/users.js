@@ -1,4 +1,4 @@
-var users = (function(){
+var Users = (function(){
     return [{
         "id": "1",
         "name": "Jon Snow",

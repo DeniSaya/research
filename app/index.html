@@ -5,23 +5,37 @@
         <title>App</title>
     </head>
     <body>
-        <div class="">
+        <div>
             <p>
                 List of users
             </p>
+            <div>
+                <p>Add a User:</p>
+                <input class="username"
+                    type="text"
+                    name="username"
+                    placeholder="Name">
+                <input class="description"
+                    type="text"
+                    name="description"
+                    placeholder="Description">
+                <button onclick="app.addUser();">
+                    Add
+                </button>
+            </div>
             <ul class="user__list js-user-list">
 
             </ul>
         </div>
 
         <script type="text/javascript"
-            src="users.js">
+            src="./data/users.js">
         </script>
         <script type="text/javascript"
-            src="js/user-list.js">
+            src="./js/user-list.js">
         </script>
         <script type="text/javascript"
-            src="app.js">
+            src="./js/app.js">
         </script>
     </body>
 </html>

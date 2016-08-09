@@ -9,10 +9,27 @@ var listOfUsers = (function() {
                 '<li>',
                     '<h4>' + users[i].name + '</h4>',
                     '<p>' + users[i].description + '</p>',
+                    '<button onclick="app.deleteUser(' + users[i].id + ');"> Delete </button>',
                 '</li>'
             ].join('');
         }
         userList.innerHTML = showUsers;
+    }
+
+    ListOfUsers.addUser = function(user) {
+        user.id = Users.length + 1;
+        Users.push(user);
+    }
+
+    ListOfUsers.deleteUser = function(id) {
+        console.log(id);
+        for (var i = 0; i = Users.length; i++) {
+            var obj = Users[i];
+            if (obj.id != -1) {
+                Users.splice(i, 1);
+                console.log(Users);
+            }
+        }
     }
 
     return ListOfUsers;
