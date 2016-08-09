@@ -22,12 +22,10 @@ var listOfUsers = (function() {
     }
 
     ListOfUsers.deleteUser = function(id) {
-        console.log(id);
-        for (var i = 0; i = Users.length; i++) {
+        for (var i = 0; i < Users.length; i++) {
             var obj = Users[i];
-            if (obj.id != -1) {
+            if (obj.id == id) {
                 Users.splice(i, 1);
-                console.log(Users);
             }
         }
     }
