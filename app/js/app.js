@@ -24,8 +24,8 @@ var app = (function() {
         App.users();
     }
 
-    App.storage = function() {
-        localStorage.storage(userList);
+    App.showStorage = function() {
+        localStorage.storage(Users);
     }
 
     App.users();
