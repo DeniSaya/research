@@ -24,6 +24,10 @@ var app = (function() {
         App.users();
     }
 
+    App.storage = function() {
+        localStorage.storage(userList);
+    }
+
     App.users();
     return App;
 })();
