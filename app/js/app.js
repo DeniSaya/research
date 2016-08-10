@@ -24,7 +24,7 @@ var app = (function() {
         App.users();
     }
 
-    App.showStorage = function() {
+    App.storage = function() {
         localStorage.storage(Users);
     }
 

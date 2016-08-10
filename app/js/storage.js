@@ -1,10 +1,10 @@
 var localStorage = (function() {
     'use strict';
 
-    var LocalStorage = {};
+    var LocalStorage = [];
     LocalStorage.storage = function(Users) {
         localStorage.setItem('users',  JSON.stringify(Users));
-        var store = localStorage.getItem('users');
+        var store = JSON.parse(localStorage.getItem('users'));
         console.log(store);
     }
 
@@ -22,3 +22,8 @@ var localStorage = (function() {
 //         } else {
 //             userList.innerHTML = "Sorry, your browser does not support Web Storage...";
 //         }
+
+
+    // localStorage.setItem('users',  JSON.stringify(Users));
+    // var store = localStorage.getItem('users');
+    // console.log(store);

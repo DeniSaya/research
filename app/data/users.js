@@ -16,7 +16,7 @@ var Users = (function(){
     },
     {
         "id": "4",
-        "name": "Chello",
+        "name": "Cheloo",
         "description": "Parazitii"
     }]
 })();
