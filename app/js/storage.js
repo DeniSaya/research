@@ -1,7 +1,7 @@
 var localStorage = (function() {
     'use strict';
 
-    var LocalStorage = [];
+    var LocalStorage = {};
     LocalStorage.storage = function(Users) {
         localStorage.setItem('users',  JSON.stringify(Users));
         var store = JSON.parse(localStorage.getItem('users'));
@@ -25,5 +25,5 @@ var localStorage = (function() {
 
 
     // localStorage.setItem('users',  JSON.stringify(Users));
-    // var store = localStorage.getItem('users');
+    // var store = JSON.parse(localStorage.getItem('users'));
     // console.log(store);

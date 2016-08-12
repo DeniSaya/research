@@ -9,6 +9,7 @@ var listOfUsers = (function() {
                 '<li>',
                     '<h4>' + users[i].name + '</h4>',
                     '<p>' + users[i].description + '</p>',
+                    '<button onclick="app.editUser(' + users[i].id + ');"> Edit </button>',
                     '<button onclick="app.deleteUser(' + users[i].id + ');"> Delete </button>',
                 '</li>'
             ].join('');
@@ -20,10 +21,19 @@ var listOfUsers = (function() {
         user.id = Users.length + 1;
         Users.push(user);
     }
+    //
+    // ListOfUsers.editUser = function(user) {
+    //     for (var i = 0; i < Users.length; i++) {
+    //         var obj = Users[i];
+    //         console.log(obj);
+    //     }
+    //     Users.push(user);
+    // }
 
     ListOfUsers.deleteUser = function(id) {
         for (var i = 0; i < Users.length; i++) {
             var obj = Users[i];
+            console.log(Users[i]);
             if (obj.id == id) {
                 Users.splice(i, 1);
             }
