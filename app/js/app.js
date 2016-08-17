@@ -2,7 +2,7 @@ var app = (function() {
     'use strict';
 
     var App = {};
-    var userList = document.querySelector(".js-user-list");
+    var userList = document.querySelector('.js-user-list');
     var username = document.querySelector('.username');
     var description = document.querySelector('.description');
 
@@ -17,6 +17,7 @@ var app = (function() {
         };
         listOfUsers.addUser(user);
         App.users();
+        App.storage();
     }
 
     App.deleteUser = function(id) {
@@ -24,8 +25,12 @@ var app = (function() {
         App.users();
     }
 
+    App.editUser = function(id) {
+        listOfUsers.editUser(id);
+    }
+
     App.storage = function() {
-        localStorage.storage(Users);
+        store.storage(Users);
     }
 
     App.users();
