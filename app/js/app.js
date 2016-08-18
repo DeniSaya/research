@@ -26,11 +26,22 @@ var app = (function() {
     }
 
     App.editUser = function(id) {
-        listOfUsers.editUser(id);
+        listOfUsers.editUser(id, username, description);
     }
 
     App.storage = function() {
         store.storage(Users);
+    }
+
+    App.saveChanges = function(id) {
+        var user = {
+            name: username.value,
+            description: description.value
+        };
+        listOfUsers.updateUser(id, user);
+        App.users();
+        username.value = '';
+        description.value = '';
     }
 
     App.users();

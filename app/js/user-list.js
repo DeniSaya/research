@@ -9,7 +9,7 @@ var listOfUsers = (function() {
                 '<li>',
                     '<h4>' + users[i].name + '</h4>',
                     '<p>' + users[i].description + '</p>',
-                    '<button class="save" onclick="app.saveUser(' + users[i].id + ');"> Save </button>',
+                    '<button class="save" onclick="app.saveChanges(' + users[i].id + ');"> Save </button>',
                     '<button onclick="app.editUser(' + users[i].id + ');"> Edit </button>',
                     '<button onclick="app.deleteUser(' + users[i].id + ');"> Delete </button>',
                 '</li>'
@@ -23,12 +23,21 @@ var listOfUsers = (function() {
         Users.push(user);
     }
 
-    ListOfUsers.editUser = function(id) {
+    ListOfUsers.editUser = function(id, nameField, descriptionField) {
         for (var i = 0; i < Users.length; i++) {
             var obj = Users[i];
-            console.log(obj);
             if (obj.id == id) {
-                onj.id = obj.name;
+                nameField.value = obj.name;
+                descriptionField.value = obj.description;
+            }
+        }
+    }
+
+    ListOfUsers.updateUser = function(id, userData) {
+        for (var i = 0; i < Users.length; i++) {
+            if (Users[i].id == id) {
+                Users[i].name = userData.name;
+                Users[i].description = userData.description;
             }
         }
     }
@@ -36,7 +45,6 @@ var listOfUsers = (function() {
     ListOfUsers.deleteUser = function(id) {
         for (var i = 0; i < Users.length; i++) {
             var obj = Users[i];
-            console.log(Users[i]);
             if (obj.id == id) {
                 Users.splice(i, 1);
             }
