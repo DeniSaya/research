@@ -9,7 +9,7 @@ var listOfUsers = (function() {
                 '<li>',
                     '<h4>' + users[i].name + '</h4>',
                     '<p>' + users[i].description + '</p>',
-                    '<button class="save" onclick="app.saveChanges(' + users[i].id + ');"> Save </button>',
+                    '<button class="js-save" style="display: none" onclick="app.saveChanges(' + users[i].id + ');"> Save </button>',
                     '<button onclick="app.editUser(' + users[i].id + ');"> Edit </button>',
                     '<button onclick="app.deleteUser(' + users[i].id + ');"> Delete </button>',
                 '</li>'
@@ -26,9 +26,11 @@ var listOfUsers = (function() {
     ListOfUsers.editUser = function(id, nameField, descriptionField) {
         for (var i = 0; i < Users.length; i++) {
             var obj = Users[i];
+            var save = document.querySelector('.js-save');
             if (obj.id == id) {
                 nameField.value = obj.name;
                 descriptionField.value = obj.description;
+                save.style.display = "inline-block";
             }
         }
     }
